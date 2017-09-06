@@ -1,9 +1,4 @@
-# puts 'What is your name?'
-#
-# name = gets.chomp
-#
-# puts 'Your name is ' + name
-#
+
 # puts 'You are on a boat on Lake Michigan.'
 #
 # puts 'There is a storm.  Would you like to go home or stay on the water and try to get to Beaver Island for your party?'
