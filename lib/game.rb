@@ -52,7 +52,9 @@ class Game
 
   def answer1
     if @answer == '0'
-      puts 'this'
+      puts 'You chase the robber across Lake Michigan and you see his boat and so you look
+      through it to see if you can find your stuff, but you unfortunately don\'t find the stuff.'
+      puts 'You finally find the robber and your stuff and it turns out that the robber was your brother who had lost all his money in a bet and decided to be a robber without telling anybody. You turn him in and you get all of your stuff back.'
     elsif @answer == '1'
       puts 'that'
     else

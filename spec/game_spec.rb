@@ -21,7 +21,7 @@ describe Game do
     end
   end
 
-  context 'step 0' do
+  context 'step 0-0' do
     before do
       $stdin = StringIO.new("0\n")
     end
@@ -34,21 +34,35 @@ describe Game do
       @game.get_answer0
       expect{@game.show_answer0}.to output("While you were gone, you were robbed! The robber had actually sailed right past you to go to the shore that you did not go to.\n").to_stdout
     end
+  end
 
-    context 'step 0-1' do
+  context 'step 0-1' do
+    before do
+      $stdin = StringIO.new("1\n")
+    end
 
-      before do
-        $stdin = StringIO.new("1\n")
-      end
+    after do
+      $stdin = STDIN
+    end
 
-      after do
-        $stdin = STDIN
-      end
+    it 'should be able to choose to go to Beaver Island' do
+      @game.get_answer0
+      expect{@game.show_answer0}.to output("You go to the party on Beaver Island and break your legs dancing.\n").to_stdout
+    end
+  end
 
-      it 'should be able to choose to go to Beaver Island' do
-        @game.get_answer0
-        expect{@game.show_answer0}.to output("You go to the party on Beaver Island and break your legs dancing.\n").to_stdout
-      end
+  context 'step 0-2' do
+    before do
+      $stdin = StringIO.new("fjlskafjklds;af")
+    end
+
+    after do
+      $stdin = STDIN
+    end
+
+    it 'should not accept random characters' do
+      @game.get_answer0
+      expect{@game.show_answer0}.to output("Please answer 0 or 1.\n").to_stdout
     end
   end
 end
