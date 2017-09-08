@@ -9,9 +9,10 @@ class Game
     self.ask_question0
     self.get_answer0
     self.show_answer0
-    self.answer_question0
     self.answer0
-    self.question1
+    self.ask_question1
+    self.get_answer1
+    self.show_answer1
   end
 
   def ask_name
@@ -50,7 +51,7 @@ class Game
   end
 
   def get_answer1
-    @answer = gets.chomp
+    @answer = $stdin.gets.chomp
   end
 
   def show_answer1
@@ -58,7 +59,7 @@ class Game
       puts "You chase the robber across Lake Michigan and you see his boat and so you look
       through it to see if you can find your stuff, but you unfortunately don\'t find the stuff.  \nYou finally find the robber and your stuff and it turns out that the robber was your brother who had lost all his money in a bet and decided to be a robber without telling anybody. You turn him in and you get all of your stuff back."
     elsif @answer == '1'
-      puts 'that'
+      puts 'To be finished'
     else
       puts 'Please answer 0 or 1.'
     end
