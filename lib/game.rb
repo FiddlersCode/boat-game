@@ -7,6 +7,8 @@ class Game
     self.get_name
     self.show_name
     self.ask_question0
+    self.get_answer0
+    self.show_answer0
     self.answer_question0
     self.answer0
     self.question1
