@@ -45,16 +45,18 @@ class Game
     end
   end
 
-  def question1
+  def ask_question1
     puts 'the robber had accidentally left one credit card, would you like to go after the robber or try to replace all the stolen stuff?'
+  end
+
+  def get_answer1
     @answer = gets.chomp
   end
 
-  def answer1
+  def show_answer1
     if @answer == '0'
-      puts 'You chase the robber across Lake Michigan and you see his boat and so you look
-      through it to see if you can find your stuff, but you unfortunately don\'t find the stuff.'
-      puts 'You finally find the robber and your stuff and it turns out that the robber was your brother who had lost all his money in a bet and decided to be a robber without telling anybody. You turn him in and you get all of your stuff back.'
+      puts "You chase the robber across Lake Michigan and you see his boat and so you look
+      through it to see if you can find your stuff, but you unfortunately don\'t find the stuff.  \nYou finally find the robber and your stuff and it turns out that the robber was your brother who had lost all his money in a bet and decided to be a robber without telling anybody. You turn him in and you get all of your stuff back."
     elsif @answer == '1'
       puts 'that'
     else

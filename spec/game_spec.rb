@@ -65,4 +65,20 @@ describe Game do
       expect{@game.show_answer0}.to output("Please answer 0 or 1.\n").to_stdout
     end
   end
+
+  context 'step 1-0' do
+    before do
+      $stdin = StringIO.new("0\n")
+    end
+
+    after do
+      $stdin = STDIN
+    end
+
+    it 'should be able to chase the robber' do
+      @game.get_answer1
+      expect{@game.show_answer1}.to output("You chase the robber across Lake Michigan and you see his boat and so you look
+      through it to see if you can find your stuff, but you unfortunately don\'t find the stuff.  \nYou finally find the robber and your stuff and it turns out that the robber was your brother who had lost all his money in a bet and decided to be a robber without telling anybody. You turn him in and you get all of your stuff back.\n").to_stdout
+    end
+  end
 end
